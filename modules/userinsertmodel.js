@@ -2,12 +2,12 @@ var mongoose = require('mongoose');
 var schema = mongoose.Schema; 	 
 
 var userSchema = new schema({
-	_id : String,
-		name : {
+	name : {
 			first : String,
 			last : String
-		},
-	email : String
+	},
+	email : String,
+	password : String
 });
 
 //create user class 
@@ -27,6 +27,11 @@ User.prototype.setEmail = function(email){
 User.prototype.setPwd = function(password){
 	this.password = password;
 };
+
+User.prototype.getPwd = function(){
+	return this.password;
+};
+
 
 User.prototype.setName = function(name){
 	this.name = name;
