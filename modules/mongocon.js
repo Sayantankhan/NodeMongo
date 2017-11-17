@@ -56,7 +56,7 @@ exports.retriveData = function(email,password){
       });
 };
 
-exports.insertData = function(){
+exports.addNewUser = function(){
 	//working fine..properly insert Data 
 	var name = 'Anubhab Mondal';
 	var email = 'anubhab.mondal@gmail.com';
